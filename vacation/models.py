@@ -36,3 +36,15 @@ class HolidayTimes(models.Model):
 
     class Meta:
         db_table = 'holiday_times'
+
+class SpecialHoliday(models.Model):
+    # Primary key
+    specialholiday_id = models.AutoField(primary_key=True)
+    specialholiday_day = models.DateField 
+    specialholiday_type = models.IntegerField()
+    specialholiday_remark = models.TextField()
+    specialholiday_standard = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'special_holiday'
+    
